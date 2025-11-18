@@ -1,48 +1,79 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Mi Blog Personal</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <title>Laboratorio JS y AJAX</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
-    <header class="site-header">
-        <h1><a href="index.html">Mi Blog</a></h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="about.html">Sobre mí</a>
-        </nav>
-    </header>
 
-    <main class="container">
-        <h2>Últimas entradas</h2>
-    
-        <article class="post-preview">
-            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=900" alt="Montaña">
-            <h3><a href="posts/post1.html">Viaje a la montaña</a></h3>
-            <p>Una experiencia inolvidable entre los paisajes naturales.</p>
-        </article>
-    
-        <article class="post-preview">
-            <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=900" alt="Pizza casera">
-            <h3><a href="posts/post2.html">Receta de pizza casera</a></h3>
-            <p>Cómo preparar una pizza deliciosa en casa paso a paso.</p>
-        </article>
-    
-        <article class="post-preview">
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=900" alt="Herramientas de trabajo">
-            <h3><a href="posts/post3.html">Mis herramientas favoritas</a></h3>
-            <p>Aplicaciones que uso todos los días para trabajar mejor.</p>
-        </article>
-    </main>
+    <h1>Laboratorio: JavaScript y AJAX</h1>
 
+    <!-- EJERCICIO 1 -->
+    <section>
+        <h2>1. Palíndromo</h2>
+        <input id="palindromoInput" placeholder="Escribe aquí">
+        <button onclick="ejercicio1()">Verificar</button>
+        <div id="resultado1" class="resultado"></div>
+    </section>
 
-    <footer>
-        <p>© 2025  Jose</p>
-    </footer>
+    <!-- EJERCICIO 2 -->
+    <section>
+        <h2>2. Número mayor</h2>
+        <input id="num1" type="number" placeholder="Número 1">
+        <input id="num2" type="number" placeholder="Número 2">
+        <button onclick="ejercicio2()">Comparar</button>
+        <div id="resultado2" class="resultado"></div>
+    </section>
+
+    <!-- EJERCICIO 3 -->
+    <section>
+        <h2>3. Vocales presentes</h2>
+        <input id="frase1" placeholder="Escribe una frase">
+        <button onclick="ejercicio3()">Mostrar vocales</button>
+        <div id="resultado3" class="resultado"></div>
+    </section>
+
+    <!-- EJERCICIO 4 -->
+    <section>
+        <h2>4. Contar vocales</h2>
+        <input id="frase2" placeholder="Escribe una frase">
+        <button onclick="ejercicio4()">Contar</button>
+        <div id="resultado4" class="resultado"></div>
+    </section>
+
+    <!-- AJAX -->
+    <section>
+        <h2>AJAX</h2>
+        <input id="urlInput" style="width: 100%" placeholder="Ingrese URL">
+        <button onclick="realizarPeticion()">Mostrar contenidos</button>
+
+        <h3>Estados de la petición</h3>
+        <div id="estado"></div>
+
+        <h3>Contenidos</h3>
+        <textarea id="contenidos"></textarea>
+
+        <h3>Cabeceras HTTP</h3>
+        <textarea id="cabeceras"></textarea>
+
+        <h3>Código de estado</h3>
+        <div id="codigo" class="resultado"></div>
+    </section>
+    <section>
+        <h2>AJAX — Rick & Morty API</h2>
+    
+        <div class="api-controls">
+            <button onclick="cargarPersonajes()">Cargar personajes</button>
+        </div>
+    
+        <div id="personajes" class="cards-container"></div>
+    </section>
+
+    <script src="scripts.js"></script>
+
 </body>
 
 </html>
